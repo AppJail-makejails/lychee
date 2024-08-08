@@ -1,0 +1,43 @@
+INCLUDE options/options.makejail
+
+ARG lychee_version=5.5.1
+ARG lychee_php_version=83
+
+PKG nginx \
+    php${lychee_php_version} \
+    php${lychee_php_version}-bcmath \
+    php${lychee_php_version}-ctype \
+    php${lychee_php_version}-dom \
+    php${lychee_php_version}-exif \
+    php${lychee_php_version}-fileinfo \
+    php${lychee_php_version}-filter \
+    php${lychee_php_version}-gd \
+    php${lychee_php_version}-pecl-imagick \
+    php${lychee_php_version}-mbstring \
+    php${lychee_php_version}-pdo \
+    php${lychee_php_version}-phar \
+    php${lychee_php_version}-pecl-redis \
+    php${lychee_php_version}-simplexml \
+    php${lychee_php_version}-tokenizer \
+    php${lychee_php_version}-xml \
+    php${lychee_php_version}-xmlwriter \
+    php${lychee_php_version}-session \
+    php${lychee_php_version}-zlib \
+    php${lychee_php_version}-mysqli \
+    php${lychee_php_version}-pgsql \
+    php${lychee_php_version}-pdo_sqlite \
+    php${lychee_php_version}-sodium \
+    php${lychee_php_version}-extensions \
+    p5-Image-Exiftool \
+    ffmpeg
+
+CMD ln -s /usr/local/etc/php.ini-production /usr/local/etc/php.ini
+CMD sed -i '' -Ee '/^listen[[:space:]]*=/s#.*#listen = /var/run/php-fpm.sock#' \
+        /usr/local/etc/php-fpm.d/www.conf
+
+CMD fetch -o /tmp/Lychee.zip \
+        https://github.com/LycheeOrg/Lychee/releases/download/v${lychee_version}/Lychee.zip
+CMD (cd /usr/local/www; unzip /tmp/Lychee.zip)
+CMD rm -f /tmp/Lychee.zip
+CMD cp -a /usr/local/www/Lychee/.env.example /usr/local/www/Lychee/.env
+CMD chown -R www:www /usr/local/www/Lychee

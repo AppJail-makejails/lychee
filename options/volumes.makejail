@@ -1,0 +1,4 @@
+OPTION volume=lychee-conf mountpoint:/conf owner:80 group:80
+OPTION volume=lychee-uploads mountpoint:/uploads owner:80 group:80
+OPTION volume=lychee-sym mountpoint:/sym owner:80 group:80
+OPTION volume=lychee-logs mountpoint:/logs owner:80 group:80
