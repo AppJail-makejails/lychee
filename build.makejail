@@ -34,6 +34,8 @@ PKG nginx \
 CMD ln -s /usr/local/etc/php.ini-production /usr/local/etc/php.ini
 CMD sed -i '' -Ee '/^listen[[:space:]]*=/s#.*#listen = /var/run/php-fpm.sock#' \
         /usr/local/etc/php-fpm.d/www.conf
+CMD sed -i '' -Ee 's/\;(listen\.(group|mode) = .+)/\1/' \
+        /usr/local/etc/php-fpm.d/www.conf
 
 CMD fetch -o /tmp/Lychee.zip \
         https://github.com/LycheeOrg/Lychee/releases/download/v${lychee_version}/Lychee.zip
