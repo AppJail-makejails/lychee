@@ -93,3 +93,7 @@ ADMIN_PASS=1ych33123@
 | ------ | ------- | -------------- | ------ | ---------------- | -------------------- |
 | `13.3` | `amd64` | `13.3-RELEASE` | `thin` | `5.5.1`          | `83`                 |
 | `14.1` | `amd64` | `14.1-RELEASE` | `thin` | `5.5.1`          | `83`                 |
+
+## Notes
+
+1. The ideas present in the Docker image of Lychee are taken into account for users who are familiar with it.
