@@ -1,0 +1,33 @@
+INCLUDE options/options.makejail
+
+ARG lychee_tag=13.3
+ARG lychee_nginx_conf=files/nginx.conf
+ARG lychee_nginx_server_name=localhost
+
+FROM --entrypoint gh+AppJail-makejails/lychee lychee:${lychee_tag}
+
+CMD echo "======> Installing scripts <======"
+COPY --verbose scripts
+
+CMD echo "======> Configuring Lychee <======"
+RUN /scripts/configure.sh
+
+CMD echo "======> Uninstalling scripts <======"
+CMD rm -rf /scripts
+
+CMD echo "======> Copying nginx configuration file <======"
+COPY --verbose ${lychee_nginx_conf} /usr/local/etc/nginx/nginx.conf
+
+CMD echo "======> Configuring 'nginx.conf' <======"
+REPLACE /usr/local/etc/nginx/nginx.conf SERVER_NAME ${lychee_nginx_server_name}
+
+CMD echo "======> Configuring crontab <======"
+CMD echo "* * * * * www cd /usr/local/www/Lychee && php artisan schedule:run >> /dev/null 2>&1" >> /etc/crontab
+
+CMD echo "======> Starting php-fpm <======"
+SERVICE php_fpm oneenable
+SERVICE php_fpm start
+
+CMD echo "======> Starting nginx <======"
+SERVICE nginx oneenable
+SERVICE nginx start

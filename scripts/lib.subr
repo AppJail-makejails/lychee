@@ -1,0 +1,26 @@
+option()
+{
+    local conf
+    conf="/conf/.env"
+
+    if grep -qEe "^[[:space:]]*${1}=" "${conf}"; then
+        sed -i '' -Ee "s|^([[:space:]]*${1})=.*|\1=${2}|" "${conf}"
+    else
+        printf "%s=%s\n" "${1}" "${2}" >> "${conf}"
+    fi
+}
+
+warn()
+{
+	echo "##!> $* <!##"
+}
+
+err()
+{
+	echo "###> $* <###"
+}
+
+info()
+{
+	echo "======> $* <======"
+}
