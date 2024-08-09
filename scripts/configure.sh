@@ -84,7 +84,7 @@ fi
 
 env | grep -Ee '^LYCHEE_[A-Z_]+=.+$' | while IFS= read -r env; do
     case "${env}" in
-        LYCHEE_SKIP_PERMISSIONS_CHECK) continue ;;
+        LYCHEE_SKIP_PERMISSIONS_CHECK|LYCHEE_ADMIN_USER|LYCHEE_ADMIN_PASSWORD) continue ;;
     esac
 
 	name=`printf "%s" "${env}" | cut -d= -f1`
