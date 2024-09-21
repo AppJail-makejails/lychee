@@ -74,7 +74,7 @@ ADMIN_PASS=1ych33123@
 
 ### Arguments
 
-* `lychee_tag` (default: `13.3`): See [#tags](#tags).
+* `lychee_tag` (default: `13.4`): See [#tags](#tags).
 * `lychee_nginx_conf` (default: `files/nginx.conf`): NGINX configuration file.
 * `lychee_nginx_server_name` (default: `localhost`): [server_name](https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name)'s value.
 
@@ -91,7 +91,7 @@ ADMIN_PASS=1ych33123@
 
 | Tag    | Arch    | Version        | Type   | `lychee_version` | `lychee_php_version` |
 | ------ | ------- | -------------- | ------ | ---------------- | -------------------- |
-| `13.3` | `amd64` | `13.3-RELEASE` | `thin` | `5.5.1`          | `83`                 |
+| `13.4` | `amd64` | `13.4-RELEASE` | `thin` | `5.5.1`          | `83`                 |
 | `14.1` | `amd64` | `14.1-RELEASE` | `thin` | `5.5.1`          | `83`                 |
 
 ## Notes

@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG lychee_tag=13.3
+ARG lychee_tag=13.4
 ARG lychee_nginx_conf=files/nginx.conf
 ARG lychee_nginx_server_name=localhost
 
