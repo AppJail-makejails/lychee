@@ -1,7 +1,7 @@
 INCLUDE options/options.makejail
 INCLUDE options/volumes.makejail
 
-ARG lychee_version=6.0.1
+ARG lychee_version=6.1.2
 ARG lychee_php_version=83
 
 PKG nginx \
