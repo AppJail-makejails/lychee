@@ -93,7 +93,7 @@ ADMIN_PASS=1ych33123@
 | Tag    | Arch    | Version        | Type   | `lychee_version` | `lychee_php_version` |
 | ------ | ------- | -------------- | ------ | ---------------- | -------------------- |
 | `13.5` | `amd64` | `13.5-RELEASE` | `thin` | `6.6.5`          | `83`                 |
-| `14.2` | `amd64` | `14.2-RELEASE` | `thin` | `6.6.5`          | `83`                 |
+| `14.3` | `amd64` | `14.3-RELEASE` | `thin` | `6.6.5`          | `83`                 |
 
 ## Notes
 
