@@ -90,10 +90,10 @@ ADMIN_PASS=1ych33123@
 
 ## Tags
 
-| Tag    | Arch    | Version        | Type   | `lychee_version` | `lychee_php_version` |
-| ------ | ------- | -------------- | ------ | ---------------- | -------------------- |
-| `%%TAG1%%` | `amd64` | `%%TAG1%%-RELEASE` | `thin` | `%%VERSION%%`          | `%%PHP_TAG%%`                 |
-| `%%TAG2%%` | `amd64` | `%%TAG2%%-RELEASE` | `thin` | `%%VERSION%%`          | `%%PHP_TAG%%`                 |
+| Tag        | Arch    | Version            | Type   |
+| ---------- | ------- | ------------------ | ------ |
+| `%%TAG1%%` | `amd64` | `%%TAG1%%-RELEASE` | `thin` |
+| `%%TAG2%%` | `amd64` | `%%TAG2%%-RELEASE` | `thin` |
 
 ## Notes
 

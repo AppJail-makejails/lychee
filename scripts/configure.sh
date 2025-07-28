@@ -4,7 +4,7 @@ set -e
 
 . /scripts/lib.subr
 
-WWWDIR=/usr/local/www/Lychee
+WWWDIR=/usr/local/www/lycheeorg
 
 for DIR in /conf /uploads /sym /logs; do
     if [ ! -d "${DIR}" ]; then
