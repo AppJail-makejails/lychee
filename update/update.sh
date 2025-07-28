@@ -11,14 +11,7 @@ set -o pipefail
 cat -- "${BASEDIR}/Makejail.template" |\
     sed -Ee "s/%%TAG1%%/${TAG1}/g" > "${BASEDIR}/../Makejail"
 
-cat -- "${BASEDIR}/build.makejail.template" |\
-    sed -E \
-        -e "s/%%VERSION%%/${VERSION}/g" \
-        -e "s/%%PHP_TAG%%/${PHP_TAG}/g" > "${BASEDIR}/../build.makejail"
-
 cat -- "${BASEDIR}/README.md.template" |\
     sed -E \
         -e "s/%%TAG1%%/${TAG1}/g" \
-        -e "s/%%TAG2%%/${TAG2}/g" \
-        -e "s/%%VERSION%%/${VERSION}/g" \
-        -e "s/%%PHP_TAG%%/${PHP_TAG}/g" > "${BASEDIR}/../README.md"
+        -e "s/%%TAG2%%/${TAG2}/g" > "${BASEDIR}/../README.md"
