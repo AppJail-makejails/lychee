@@ -74,7 +74,7 @@ ADMIN_PASS=1ych33123@
 
 ### Arguments
 
-* `lychee_tag` (default: `13.5`): See [#tags](#tags).
+* `lychee_tag` (default: `14.3`): See [#tags](#tags).
 * `lychee_ajspec` (default: `gh+AppJail-makejails/lychee`): Entry point where the `appjail-ajspec(5)` file is located.
 * `lychee_nginx_conf` (default: `files/nginx.conf`): NGINX configuration file.
 * `lychee_nginx_server_name` (default: `localhost`): [server_name](https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name)'s value.
@@ -92,8 +92,8 @@ ADMIN_PASS=1ych33123@
 
 | Tag        | Arch    | Version            | Type   |
 | ---------- | ------- | ------------------ | ------ |
-| `13.5` | `amd64` | `13.5-RELEASE` | `thin` |
 | `14.3` | `amd64` | `14.3-RELEASE` | `thin` |
+| `15` | `amd64` | `15` | `thin` |
 
 ## Notes
 
