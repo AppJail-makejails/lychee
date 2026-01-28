@@ -1,14 +1,15 @@
 tags+: 14.3
 14.3.arch: amd64
 14.3.name: "lychee"
-14.3.timestamp.amd64: 1768875422
-14.3.sum.amd64: 1e9d87e51eb6213ca0813742b298c75552a5c91346e78a39ffc3197eae7b4619
-14.3.size.amd64: 598848418
+14.3.timestamp.amd64: 1769639991
+14.3.sum.amd64: 716ec4ded9ebbc35a35d761b437e23f440137ca72b2d8965b77fb817ba10450a
+14.3.size.amd64: 599389923
 14.3.source.amd64: "http://appjail.hpc.at/lychee/14.3-amd64-image.appjail"
 tags+: 15
 15.arch: amd64
 15.name: "lychee"
-15.timestamp.amd64: 1768876317
-15.sum.amd64: 6209ad2535b71924543d3cad07e94af2d1a358598e25ed1f04e73ffc85b16197
-15.size.amd64: 675372222
+15.timestamp.amd64: 1769640844
+15.sum.amd64: 93abeb54d0612bb5ec27dd8a71fd1b0d89ad77115d3dd71667db3d4af5f4e582
+15.size.amd64: 673306161
 15.source.amd64: "http://appjail.hpc.at/lychee/15-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
