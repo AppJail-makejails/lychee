@@ -265,8 +265,5 @@ build:
         FREEBSD_RELEASE: "15.1"
         PHPVER: "84"
         NO_PKGCLEAN: "1"
-      cache_dirs:
-        - "pkgcache0:/var/cache/pkg"
-        - /home/user/Tests/Ports/files/usr/local/etc/pkg/repos:/usr/local/etc/pkg/repos
-        - /usr/local/poudriere/data/packages/150amd64-local:/repo
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
 ```
