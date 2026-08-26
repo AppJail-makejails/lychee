@@ -23,9 +23,8 @@ $ appjail oci run -Pd \
     ghcr.io/appjail-makejails/lychee lychee
 ```
 
-!!! warning
-
-    Since you are using the OCI image, changes to environment variables require a container restart, as the server loads and caches the configuration at startup.
+> [!WARNING]
+> Since you are using the OCI image, changes to environment variables require a container restart, as the server loads and caches the configuration at startup.
 
 See [Configuration](https://lycheeorg.dev/docs/getting-started/configuration/) for all available environment variables.
 
