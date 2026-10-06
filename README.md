@@ -262,7 +262,7 @@ build:
       default: true
       args:
         FREEBSD_RELEASE: "15.1"
-        PHPVER: "84"
+        PHPVER: "85"
         NO_PKGCLEAN: "1"
       cache_dirs: ["pkgcache0:/var/cache/pkg"]
 ```
